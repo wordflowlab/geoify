@@ -1,0 +1,173 @@
+{
+  "overall": 8.5,
+  "breakdown": {
+    "experience": 9.2,
+    "expertise": 9.6,
+    "authoritativeness": 5,
+    "trustworthiness": 10
+  },
+  "details": {
+    "experience": {
+      "score": 9.2,
+      "checks": {
+        "hasFirstPerson": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 包含第一人称叙述"
+        },
+        "hasSpecificDetails": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 包含具体时间/数字/地点等细节"
+        },
+        "hasRealCases": {
+          "passed": true,
+          "score": 0.6666666666666666,
+          "message": "✓ 包含 2 个真实案例/示例",
+          "data": {
+            "caseCount": 2
+          }
+        },
+        "avoidsVagueTerms": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 避免使用模糊表述",
+          "data": {
+            "vagueTermsCount": 0
+          }
+        }
+      }
+    },
+    "expertise": {
+      "score": 9.6,
+      "checks": {
+        "hasTechnicalDetails": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 包含技术细节 (代码: 1, 术语: 7)",
+          "data": {
+            "codeBlockCount": 1,
+            "uniqueTerms": 7,
+            "explanations": 3
+          }
+        },
+        "hasDeepAnalysis": {
+          "passed": true,
+          "score": 0.8569156915691569,
+          "message": "✓ 包含深度分析 (523 字, 10 个标题)",
+          "data": {
+            "wordCount": 523,
+            "headingCount": 10,
+            "listCount": 16,
+            "analysisCount": 3
+          }
+        },
+        "avoidsCommonKnowledge": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 避免常识性内容",
+          "data": {
+            "commonCount": 0
+          }
+        },
+        "hasUniqueInsights": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 包含独特见解 (5 处)",
+          "data": {
+            "insightCount": 5
+          }
+        }
+      }
+    },
+    "authoritativeness": {
+      "score": 5,
+      "checks": {
+        "hasCitations": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 包含引用 (6 处)"
+        },
+        "citationCount": {
+          "passed": false,
+          "score": 0,
+          "message": "✗ 引用不足 (0 个来源,建议 ≥3 个,其中至少 1 个权威来源)",
+          "data": {
+            "totalCitations": 0,
+            "authoritativeCitations": 0,
+            "citations": []
+          }
+        },
+        "hasAuthorCredentials": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 包含作者资质信息",
+          "data": {
+            "hasAuthor": true,
+            "hasTitle": true,
+            "hasCredentials": true,
+            "hasContact": true
+          }
+        },
+        "hasExternalLinks": {
+          "passed": false,
+          "score": 0,
+          "message": "✗ 外部链接较少 (0 个,建议 ≥2 个)",
+          "data": {
+            "externalLinks": []
+          }
+        }
+      }
+    },
+    "trustworthiness": {
+      "score": 10,
+      "checks": {
+        "allDataSourced": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 数据有来源引用 (6/6)",
+          "data": {
+            "dataStatements": 6,
+            "citations": 6,
+            "sourcedRatio": 100
+          }
+        },
+        "hasPublishDate": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 包含发布时间"
+        },
+        "hasUpdateDate": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 包含更新时间"
+        },
+        "hasContactInfo": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 包含联系方式",
+          "data": {
+            "frontmatterContact": true,
+            "hasEmailInContent": true,
+            "hasSocialInContent": true
+          }
+        }
+      }
+    }
+  },
+  "recommendations": [
+    {
+      "dimension": "authoritativeness",
+      "priority": "high",
+      "message": "引用不足 (0 个来源,建议 ≥3 个,其中至少 1 个权威来源)",
+      "impact": 0
+    },
+    {
+      "dimension": "authoritativeness",
+      "priority": "high",
+      "message": "外部链接较少 (0 个,建议 ≥2 个)",
+      "impact": 0
+    }
+  ],
+  "timestamp": "2025-11-02T14:46:06.227Z"
+}
