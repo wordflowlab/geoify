@@ -1,0 +1,182 @@
+{
+  "overall": 9.7,
+  "breakdown": {
+    "experience": 9.2,
+    "expertise": 9.4,
+    "authoritativeness": 10,
+    "trustworthiness": 10
+  },
+  "details": {
+    "experience": {
+      "score": 9.2,
+      "checks": {
+        "hasFirstPerson": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 包含第一人称叙述"
+        },
+        "hasSpecificDetails": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 包含具体时间/数字/地点等细节"
+        },
+        "hasRealCases": {
+          "passed": true,
+          "score": 0.6666666666666666,
+          "message": "✓ 包含 2 个真实案例/示例",
+          "data": {
+            "caseCount": 2
+          }
+        },
+        "avoidsVagueTerms": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 避免使用模糊表述",
+          "data": {
+            "vagueTermsCount": 0
+          }
+        }
+      }
+    },
+    "expertise": {
+      "score": 9.4,
+      "checks": {
+        "hasTechnicalDetails": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 包含技术细节 (代码: 6, 术语: 18)",
+          "data": {
+            "codeBlockCount": 6,
+            "uniqueTerms": 18,
+            "explanations": 33
+          }
+        },
+        "hasDeepAnalysis": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 包含深度分析 (1529 字, 18 个标题)",
+          "data": {
+            "wordCount": 1529,
+            "headingCount": 18,
+            "listCount": 53,
+            "analysisCount": 5
+          }
+        },
+        "avoidsCommonKnowledge": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 避免常识性内容",
+          "data": {
+            "commonCount": 0
+          }
+        },
+        "hasUniqueInsights": {
+          "passed": true,
+          "score": 0.75,
+          "message": "✓ 包含独特见解 (3 处)",
+          "data": {
+            "insightCount": 3
+          }
+        }
+      }
+    },
+    "authoritativeness": {
+      "score": 10,
+      "checks": {
+        "hasCitations": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 包含引用 (15 处)"
+        },
+        "citationCount": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 引用充足 (10 个来源, 1 个权威来源)",
+          "data": {
+            "totalCitations": 10,
+            "authoritativeCitations": 1,
+            "citations": [
+              "https://doc.rust-lang.org/book/",
+              "https://play.rust-lang.org/",
+              "https://users.rust-lang.org/",
+              "https://blog.rust-lang.org/2024/02/19/2023-Rust-Annual-Survey-2023-results.html",
+              "https://webassembly.org/getting-started/developers-guide/",
+              "https://survey.stackoverflow.co/2023/",
+              "https://reddit.com/r/rust",
+              "https://doc.rust-lang.org/rust-by-example/",
+              "https://github.com/rust-lang/rustlings",
+              "https://rustwasm.github.io/wasm-bindgen/"
+            ]
+          }
+        },
+        "hasAuthorCredentials": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 包含作者资质信息",
+          "data": {
+            "hasAuthor": true,
+            "hasTitle": true,
+            "hasCredentials": true,
+            "hasContact": true
+          }
+        },
+        "hasExternalLinks": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 包含外部链接 (10 个)",
+          "data": {
+            "externalLinks": [
+              "https://doc.rust-lang.org/book/",
+              "https://play.rust-lang.org/",
+              "https://users.rust-lang.org/",
+              "https://blog.rust-lang.org/2024/02/19/2023-Rust-Annual-Survey-2023-results.html",
+              "https://webassembly.org/getting-started/developers-guide/",
+              "https://survey.stackoverflow.co/2023/",
+              "https://reddit.com/r/rust",
+              "https://doc.rust-lang.org/rust-by-example/",
+              "https://github.com/rust-lang/rustlings",
+              "https://rustwasm.github.io/wasm-bindgen/"
+            ]
+          }
+        }
+      }
+    },
+    "trustworthiness": {
+      "score": 10,
+      "checks": {
+        "allDataSourced": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 数据有来源引用 (15/2)",
+          "data": {
+            "dataStatements": 2,
+            "citations": 15,
+            "sourcedRatio": 750
+          }
+        },
+        "hasPublishDate": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 包含发布时间"
+        },
+        "hasUpdateDate": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 包含更新时间"
+        },
+        "hasContactInfo": {
+          "passed": true,
+          "score": 1,
+          "message": "✓ 包含联系方式",
+          "data": {
+            "frontmatterContact": true,
+            "hasEmailInContent": true,
+            "hasSocialInContent": true
+          }
+        }
+      }
+    }
+  },
+  "recommendations": [],
+  "timestamp": "2025-11-02T15:02:36.511Z"
+}

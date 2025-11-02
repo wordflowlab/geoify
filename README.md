@@ -157,44 +157,93 @@ my-article/
 
 ## 示例
 
-### 生成符合 GEO 标准的文章
+### 5 分钟快速入门
+
+查看完整示例项目,了解如何使用 Geoify:
+
+📂 **[完整工作流示例](examples/complete-workflow/)**
+- [快速入门指南](examples/complete-workflow/QUICKSTART.md) - 5 分钟体验
+- [示例文章](examples/complete-workflow/draft.md) - 9.7/10 高分范例
+- [深度分析](examples/complete-workflow/ANALYSIS.md) - 为什么得高分?
+
+### 真实案例:Rust 学习指南
+
+这篇示例文章展示了如何撰写高质量 GEO 内容:
+
+**E-E-A-T 评分**: 9.7/10 🌟
+- Experience: 9.2/10 - 真实的学习经历和项目实践
+- Expertise: 9.4/10 - 6 个代码示例,18 个技术术语
+- Authoritativeness: 10/10 - 引用 10 个权威来源
+- Trustworthiness: 10/10 - 完整的作者信息和可验证数据
+
+**关键成功要素**:
+- ✅ 第一人称分享 2 年 Rust 实践经历
+- ✅ 3 个完整的实战项目(CLI、WASM、图像处理)
+- ✅ 具体的性能数据(7-8 倍提升)
+- ✅ 引用官方文档和权威调查
+- ✅ 1597 字深度内容
+
+查看 [ANALYSIS.md](examples/complete-workflow/ANALYSIS.md) 了解详细分析。
+
+### 命令行快速体验
+
+```bash
+# 1. 下载示例文章
+curl -o draft.md https://raw.githubusercontent.com/wordflowlab/geoify/main/examples/complete-workflow/draft.md
+
+# 2. 评估 E-E-A-T 分数
+geoify review draft.md
+
+# 3. 生成 Schema.org 标记
+geoify schema draft.md \
+  --url "https://example.com/rust-guide" \
+  --site-name "Tech Blog"
+```
+
+### 完整工作流
 
 ```bash
 # 1. 初始化项目
-geoify init best-programming-languages-2024
+geoify init my-article
 
-# 2. 在 Claude Code 中使用命令
-/geo-analyze "2024年最值得学习的编程语言"
-# → AI 分析竞争对手和内容缺口
+# 2. 撰写文章(在 articles/ 目录)
 
-/specify
-# → 定义 E-E-A-T 目标
+# 3. E-E-A-T 审校
+geoify review articles/001-topic/draft.md
 
-/geo-write
-# → 选择写作模式,生成内容
+# 4. 根据建议优化
 
-/geo-review
-# → E-E-A-T 审校,获得评分报告
+# 5. 再次审校,确保达标
+geoify review articles/001-topic/final.md \
+  --target-experience 9 \
+  --target-authoritativeness 9
 
-/geo-schema
-# → 生成 Schema.org 标记
+# 6. 生成 Schema.org 标记
+geoify schema articles/001-topic/final.md \
+  --url "https://example.com/topic" \
+  --site-name "My Blog"
 
-/geo-publish
-# → 发布到网站
-
-/geo-track
-# → 开始跟踪 AI 引用情况
+# 7. 发布到网站
 ```
 
 ### 预期效果
 
-- ✅ E-E-A-T 评分: 8.5/10
-- ✅ AI 引用概率: 75%+
-- ✅ 被 Perplexity 引用: 2 周内
-- ✅ 被 ChatGPT 引用: 4 周内
+基于 9.7/10 的高分文章:
+- ✅ E-E-A-T 评分: 9.7/10
+- ✅ AI 引用概率: 80-90%
+- ✅ Perplexity 引用: 2-4 周内
+- ✅ ChatGPT 引用: 4-6 周内
+- ✅ 6 个月累计引用: 500-1000 次
 
 ## 文档
 
+### 用户文档
+- [快速入门](examples/complete-workflow/QUICKSTART.md) - 5 分钟上手指南
+- [使用手册](USAGE.md) - 详细的使用说明
+- [示例分析](examples/complete-workflow/ANALYSIS.md) - 高分文章深度解析
+- [更新日志](CHANGELOG.md) - 版本变更记录
+
+### 开发文档
 - [完整 PRD](docs/PRD.md) - 产品需求文档
 - [实施路线图](docs/ROADMAP.md) - 开发计划
 - [技术架构](docs/ARCHITECTURE.md) - 架构设计

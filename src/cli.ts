@@ -11,7 +11,7 @@ const program = new Command()
 program
   .name('geoify')
   .description('GEO (Generative Engine Optimization) - 优化内容使其成为 AI 引擎的引用来源')
-  .version('0.1.0')
+  .version('0.1.0') // GEO MVP - E-E-A-T scoring + Schema.org generation
 
 // Init 命令
 program
