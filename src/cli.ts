@@ -4,6 +4,7 @@ import { Command } from '@commander-js/extra-typings'
 import chalk from 'chalk'
 import { initCommand } from './commands/init.js'
 import { reviewCommand } from './commands/review.js'
+import { schemaCommand } from './commands/schema.js'
 
 const program = new Command()
 
@@ -62,6 +63,33 @@ program
       })
     } catch (error) {
       console.error(chalk.red('审校失败:'), error)
+      process.exit(1)
+    }
+  })
+
+// Schema 命令
+program
+  .command('schema')
+  .description('生成 Schema.org 结构化数据')
+  .argument('<article>', '文章路径 (Markdown 文件)')
+  .option('--url <url>', '文章 URL')
+  .option('--site-name <name>', '网站名称')
+  .option('--site-logo <url>', '网站 Logo URL')
+  .option('--language <lang>', '语言代码 (如 zh-CN, en-US)', 'zh-CN')
+  .option('--output <dir>', '输出目录 (默认为文章所在目录)')
+  .option('--format <type>', '输出格式: json, html, both', 'both')
+  .action(async (article, options) => {
+    try {
+      await schemaCommand(article, {
+        url: options.url,
+        siteName: options.siteName,
+        siteLogo: options.siteLogo,
+        language: options.language,
+        output: options.output,
+        format: options.format as 'json' | 'html' | 'both'
+      })
+    } catch (error) {
+      console.error(chalk.red('Schema 生成失败:'), error)
       process.exit(1)
     }
   })

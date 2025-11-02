@@ -72,7 +72,19 @@ geoify review article/draft.md \
   --target-trustworthiness 10
 ```
 
-### 3. 使用工作流
+### 3. 生成 Schema.org 标记
+
+```bash
+# 生成结构化数据
+geoify schema article/final.md \
+  --url "https://example.com/article" \
+  --site-name "My Blog"
+
+# 仅生成 JSON
+geoify schema article/final.md --format json
+```
+
+### 4. 使用工作流
 
 在 AI 助手(Claude/Cursor/Gemini)中使用斜杠命令:
 
@@ -198,13 +210,13 @@ Geoify 基于 [scriptify (article-writer)](https://github.com/wordflowlab/script
 
 ## 路线图
 
-### v0.1.0-alpha.2 (当前开发中)
+### v0.1.0-alpha.3 (当前版本) ✨
 
 - [x] 项目初始化
-- [x] E-E-A-T 评分系统 ✨ 新功能
-- [x] `/geo-review` CLI 命令 ✨ 新功能
-- [ ] `/geo-schema` 命令
-- [ ] 示例项目和文档
+- [x] E-E-A-T 评分系统
+- [x] `geoify review` - E-E-A-T 审校命令
+- [x] `geoify schema` - Schema.org 生成命令
+- [ ] 示例项目和完整文档
 
 ### v0.1.0 (MVP)
 
