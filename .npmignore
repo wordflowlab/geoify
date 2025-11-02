@@ -1,0 +1,45 @@
+# Source files
+src/
+tsconfig.json
+*.ts
+!*.d.ts
+
+# Development
+.claude/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+coverage/
+*.test.js
+*.spec.js
+
+# Documentation (keep README.md)
+DEVELOPMENT.md
+docs/
+
+# Git
+.git/
+.gitignore
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+logs/
+
+# Temporary
+*.tmp
+.temp/
+
+# Scripts (keep what's needed for runtime)
+scripts/
+
+# Node
+node_modules/
