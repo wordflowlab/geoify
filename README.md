@@ -1,5 +1,11 @@
 # Geoify - AI 引用优化工具
 
+[![npm version](https://img.shields.io/npm/v/geoify.svg)](https://www.npmjs.com/package/geoify)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Node.js](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org/)
+[![Test](https://github.com/wordflowlab/geoify/actions/workflows/test.yml/badge.svg)](https://github.com/wordflowlab/geoify/actions/workflows/test.yml)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
 > Optimize for AI Citation, Not Just Search Ranking
 
 **Geoify** 是一款专注于 GEO (Generative Engine Optimization) 的 AI 内容工具,帮助你的内容成为 ChatGPT、Perplexity、Claude 等 AI 引擎的引用来源。

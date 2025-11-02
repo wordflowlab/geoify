@@ -29,7 +29,20 @@ logs/
 
 # Testing
 coverage/
+*.lcov
 
 # Temporary files
 *.tmp
 .temp/
+
+# Test artifacts
+test-*.md
+test-*.json
+*-eeat-score.json
+*-review-report.md
+*-schema.json
+*-schema.html
+
+# Editor
+*.sublime-*
+.editorconfig
