@@ -33,6 +33,9 @@
     "build:commands": "bash scripts/build/generate-commands.sh --agents=claude,gemini,cursor,windsurf,roocode,copilot,qwen,opencode,codex,kilocode,auggie,codebuddy,q --scripts=sh",
     "dev": "tsx src/cli.ts",
     "start": "node dist/cli.js",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage",
     "clean": "rm -rf dist",
     "prepare": "npm run build",
     "prepublishOnly": "npm run clean && npm run build"
@@ -52,8 +55,10 @@
     "@types/inquirer": "^9.0.9",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^20.10.0",
+    "@vitest/ui": "^4.0.6",
     "tsx": "^4.7.0",
-    "typescript": "^5.3.3"
+    "typescript": "^5.3.3",
+    "vitest": "^4.0.6"
   },
   "engines": {
     "node": ">=18.0.0"
