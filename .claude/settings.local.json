@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/coso/Documents/dev/ai/wordflowlab/scriptify/**)",
+      "WebSearch"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
