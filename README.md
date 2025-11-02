@@ -4,6 +4,8 @@
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org/)
 [![Test](https://github.com/wordflowlab/geoify/actions/workflows/test.yml/badge.svg)](https://github.com/wordflowlab/geoify/actions/workflows/test.yml)
+[![Coverage](https://img.shields.io/badge/coverage-91.6%25-brightgreen.svg)](COVERAGE_REPORT.md)
+[![Tests](https://img.shields.io/badge/tests-54%20passing-brightgreen.svg)](TEST_SUMMARY.md)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 > Optimize for AI Citation, Not Just Search Ranking

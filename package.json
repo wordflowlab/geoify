@@ -36,6 +36,7 @@
     "test": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage",
+    "benchmark": "tsx benchmark.ts",
     "clean": "rm -rf dist",
     "prepare": "npm run build",
     "prepublishOnly": "npm run clean && npm run build"
@@ -55,6 +56,7 @@
     "@types/inquirer": "^9.0.9",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^20.10.0",
+    "@vitest/coverage-v8": "^4.0.6",
     "@vitest/ui": "^4.0.6",
     "tsx": "^4.7.0",
     "typescript": "^5.3.3",
