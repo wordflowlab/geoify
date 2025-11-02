@@ -3,6 +3,7 @@
 import { Command } from '@commander-js/extra-typings'
 import chalk from 'chalk'
 import { initCommand } from './commands/init.js'
+import { reviewCommand } from './commands/review.js'
 
 const program = new Command()
 
@@ -36,6 +37,33 @@ program
   .action(() => {
     console.log(chalk.yellow('⚠️  /geo-track 命令将在 v0.2.0 实现'))
     console.log(chalk.gray('敬请期待!'))
+  })
+
+// Review 命令
+program
+  .command('review')
+  .description('GEO 专项审校,评估 E-E-A-T 得分')
+  .argument('<article>', '文章路径 (Markdown 文件)')
+  .option('-v, --verbose', '详细输出')
+  .option('--target-experience <score>', '目标体验分数', '8')
+  .option('--target-expertise <score>', '目标专业性分数', '8')
+  .option('--target-authoritativeness <score>', '目标权威性分数', '8')
+  .option('--target-trustworthiness <score>', '目标可信度分数', '9')
+  .action(async (article, options) => {
+    try {
+      await reviewCommand(article, {
+        verbose: options.verbose,
+        target: {
+          experience: parseFloat(options.targetExperience),
+          expertise: parseFloat(options.targetExpertise),
+          authoritativeness: parseFloat(options.targetAuthoritativeness),
+          trustworthiness: parseFloat(options.targetTrustworthiness)
+        }
+      })
+    } catch (error) {
+      console.error(chalk.red('审校失败:'), error)
+      process.exit(1)
+    }
   })
 
 // Analyze 命令 (未来实现)

@@ -47,10 +47,10 @@ AI 搜索 (GEO):
 ### 安装
 
 ```bash
-npm install -g geoify
+npm install -g geoify@alpha
 ```
 
-### 初始化项目
+### 1. 初始化项目
 
 ```bash
 # 创建新项目
@@ -60,7 +60,19 @@ geoify init my-article
 cd my-article
 ```
 
-### 使用工作流
+### 2. 审校文章 (CLI 命令)
+
+```bash
+# 评估文章的 E-E-A-T 得分
+geoify review article/draft.md
+
+# 自定义目标分数
+geoify review article/draft.md \
+  --target-experience 9 \
+  --target-trustworthiness 10
+```
+
+### 3. 使用工作流
 
 在 AI 助手(Claude/Cursor/Gemini)中使用斜杠命令:
 
@@ -186,13 +198,19 @@ Geoify 基于 [scriptify (article-writer)](https://github.com/wordflowlab/script
 
 ## 路线图
 
-### v0.1.0 (MVP) - 4 周
+### v0.1.0-alpha.2 (当前开发中)
 
 - [x] 项目初始化
-- [ ] E-E-A-T 评分系统
+- [x] E-E-A-T 评分系统 ✨ 新功能
+- [x] `/geo-review` CLI 命令 ✨ 新功能
+- [ ] `/geo-schema` 命令
+- [ ] 示例项目和文档
+
+### v0.1.0 (MVP)
+
+- [ ] `/geo-write` 命令实现
 - [ ] 引用格式优化
-- [ ] `/geo-write` 命令
-- [ ] `/geo-review` 命令
+- [ ] 完整测试覆盖
 
 ### v0.2.0 (Beta) - 3 周
 
