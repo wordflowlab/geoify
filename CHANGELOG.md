@@ -8,10 +8,119 @@
 ## [Unreleased]
 
 ### 计划中
-- AI 引用跟踪功能 (`geoify track`) - v0.3.0
-- 竞争分析功能 (`geoify analyze`) - v0.3.0
-- 多语言支持(英文、日文) - v0.3.0
-- Web 可视化看板 - v0.3.0
+- AI 引用跟踪功能 (`geoify track`) - v0.4.0
+- 竞争分析功能 (`geoify analyze`) - v0.4.0
+- 多语言支持(英文、日文) - v0.4.0
+- Web 可视化看板 - v0.4.0
+
+## [0.3.0] - 2025-11-03
+
+### 重要里程碑 🎉
+
+**v0.3.0 架构重构版** - 完全对齐 Scriptify 三层架构
+
+这是一个重大架构重构版本,参考 [Scriptify](https://github.com/wordflowlab/scriptify) 项目实现了三层分离架构:
+
+1. **Markdown 模板层** - 定义 AI 角色、评估标准和执行原则
+2. **Bash/PowerShell 脚本层** - 处理文件操作和数据提取
+3. **TypeScript CLI 层** - 提供命令框架和脚本调用
+
+### 架构重构
+
+1. **三层架构实现** ✅
+   - Markdown 模板定义 AI 执行标准(geo-review.md, geo-schema.md 等)
+   - Shell 脚本负责数据提取和 JSON 输出
+   - TypeScript CLI 调用脚本并展示模板给 AI
+   - 完全分离业务逻辑和技术实现
+
+2. **跨平台 Shell 脚本** ✅
+   - Bash 脚本支持 macOS/Linux
+     - `scripts/bash/common.sh` - 通用函数库
+     - `scripts/bash/review.sh` - E-E-A-T 数据提取
+     - `scripts/bash/schema.sh` - Schema.org 数据提取
+     - `scripts/bash/generate-llms.sh` - llms.txt 文章扫描
+   - PowerShell 脚本支持 Windows
+     - `scripts/powershell/common.ps1` - 通用函数库
+     - `scripts/powershell/review.ps1` - E-E-A-T 数据提取
+     - `scripts/powershell/schema.ps1` - Schema.org 数据提取
+     - `scripts/powershell/generate-llms.ps1` - llms.txt 文章扫描
+   - 自动平台检测(`process.platform === 'win32'`)
+
+3. **模板系统升级** ✅
+   - YAML frontmatter 引用脚本:
+     ```yaml
+     scripts:
+       sh: ../../scripts/bash/review.sh
+       ps1: ../../scripts/powershell/review.ps1
+     ```
+   - 移除硬编码评分逻辑,改为定义评估标准
+   - AI 根据模板和 JSON 数据灵活执行
+
+4. **代码清理** ✅
+   - 删除 15 个冗余文件,约 2000 行代码
+   - 删除模块:
+     - `src/scoring/` (7 文件, ~800 行)
+     - `src/schema/` (4 文件, ~600 行)
+     - `src/llms/` (2 文件, ~400 行)
+     - `src/reports/` (1 文件, ~200 行)
+     - `src/commands/review.ts`, `schema.ts`, `generate-llms.ts`
+   - TypeScript 文件从 17 个减少到 3 个核心文件
+   - 代码量减少约 82%
+
+### 新增
+
+- `src/utils/bash-runner.ts` - Shell 脚本执行器
+  - `executeBashScript()` - 跨平台脚本执行
+  - `parseCommandTemplate()` - 模板解析
+  - 自动 JSON 解析和错误处理
+
+### Breaking Changes
+
+**重要**: 本次重构移除了所有 TypeScript 业务逻辑模块,但 CLI 使用方式完全不变。
+
+- 移除的模块:
+  - `src/scoring/` - E-E-A-T 评分逻辑
+  - `src/schema/` - Schema.org 生成逻辑
+  - `src/llms/` - llms.txt 生成逻辑
+  - `src/reports/` - 报告生成逻辑
+  - `src/commands/` 中的业务逻辑文件
+
+- 功能实现方式:
+  - 所有业务逻辑现由 Shell 脚本实现
+  - TypeScript 仅保留 CLI 框架和脚本调用
+  - 命令行接口和使用方式保持不变
+
+### 升级说明
+
+从 v0.2.0 升级到 v0.3.0:
+
+```bash
+npm install -g geoify
+```
+
+**无需修改任何使用代码**,所有 CLI 命令保持完全兼容:
+
+```bash
+# 所有命令用法不变
+geoify init
+geoify review article.md
+geoify schema article.md
+geoify generate-llms
+```
+
+### 技术改进
+
+- ✅ 架构更清晰:模板、脚本、CLI 三层分离
+- ✅ 跨平台支持:Bash + PowerShell 双脚本系统
+- ✅ 代码更精简:删除 82% 的 TypeScript 代码
+- ✅ 维护性更好:业务逻辑在 Shell 脚本中更易理解
+- ✅ 扩展性更强:添加新命令只需添加模板和脚本
+
+### 文档更新
+
+- 更新架构说明
+- 添加 Shell 脚本文档
+- 更新开发指南
 
 ## [0.2.0] - 2025-11-03
 
