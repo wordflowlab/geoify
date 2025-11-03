@@ -52,60 +52,64 @@ AI 搜索 (GEO):
 
 ## 快速开始
 
+### 🚀 10 分钟快速体验
+
+**最快上手方式** → [QUICKSTART.md](QUICKSTART.md)
+
+从分析到发布,10 分钟走完完整流程!
+
 ### 安装
 
 ```bash
-npm install -g geoify@alpha
+npm install -g geoify
 ```
 
-### 1. 初始化项目
+### 完整工作流 (9 步)
+
+```mermaid
+graph LR
+    A[1. 初始化项目] --> B[2. /geo.analyze]
+    B --> C[3. /geo.specify]
+    C --> D{选择}
+    D -->|深入研究| E[4a. /geo.research]
+    D -->|快速创作| F[4b. /geo.collect]
+    E --> F
+    F --> G[5. /geo.write]
+    G --> H[6. geoify review]
+    H --> I{分数≥8.5?}
+    I -->|是| J[7. geoify schema]
+    I -->|否| G
+    J --> K[8. /geo.publish]
+    K --> L[9. /geo.track]
+```
+
+### 命令列表
+
+**在 AI 助手中使用** (Claude Code / Cursor / Gemini 等):
+
+```
+/geo.analyze   - 分析 GEO 现状和机会
+/geo.specify   - 定义内容目标
+/geo.research  - 研究竞争对手 (可选)
+/geo.collect   - 收集真实素材
+/geo.write     - 生成内容草稿
+/geo.publish   - 发布准备
+/geo.track     - 跟踪 AI 引用
+```
+
+**在终端使用**:
 
 ```bash
-# 创建新项目
+# 初始化项目
 geoify init my-article
 
-# 进入项目目录
-cd my-article
-```
-
-### 2. 审校文章 (CLI 命令)
-
-```bash
-# 评估文章的 E-E-A-T 得分
+# E-E-A-T 评分
 geoify review article/draft.md
 
-# 自定义目标分数
-geoify review article/draft.md \
-  --target-experience 9 \
-  --target-trustworthiness 10
-```
-
-### 3. 生成 Schema.org 标记
-
-```bash
-# 生成结构化数据
+# 生成 Schema.org
 geoify schema article/final.md \
   --url "https://example.com/article" \
   --site-name "My Blog"
-
-# 仅生成 JSON
-geoify schema article/final.md --format json
-```
-
-### 4. 使用工作流
-
-在 AI 助手(Claude/Cursor/Gemini)中使用斜杠命令:
-
-```
-1. /geo-analyze  → 分析目标话题的 GEO 现状
-2. /specify      → 定义内容目标和 E-E-A-T 要求
-3. /research     → 研究竞争对手和权威来源
-4. /collect      → 收集真实数据和案例
-5. /geo-write    → 生成符合 E-E-A-T 标准的内容
-6. /geo-review   → GEO 专项审校
-7. /geo-schema   → 生成结构化数据标记
-8. /geo-publish  → 发布并提交到 AI 索引
-9. /geo-track    → 跟踪 AI 引用情况
 ```
 
 ## E-E-A-T 原则
@@ -163,93 +167,26 @@ my-article/
         └── final.md
 ```
 
-## 示例
+## 评分标准
 
-### 5 分钟快速入门
-
-查看完整示例项目,了解如何使用 Geoify:
-
-📂 **[完整工作流示例](examples/complete-workflow/)**
-- [快速入门指南](examples/complete-workflow/QUICKSTART.md) - 5 分钟体验
-- [示例文章](examples/complete-workflow/draft.md) - 9.7/10 高分范例
-- [深度分析](examples/complete-workflow/ANALYSIS.md) - 为什么得高分?
-
-### 真实案例:Rust 学习指南
-
-这篇示例文章展示了如何撰写高质量 GEO 内容:
-
-**E-E-A-T 评分**: 9.7/10 🌟
-- Experience: 9.2/10 - 真实的学习经历和项目实践
-- Expertise: 9.4/10 - 6 个代码示例,18 个技术术语
-- Authoritativeness: 10/10 - 引用 10 个权威来源
-- Trustworthiness: 10/10 - 完整的作者信息和可验证数据
-
-**关键成功要素**:
-- ✅ 第一人称分享 2 年 Rust 实践经历
-- ✅ 3 个完整的实战项目(CLI、WASM、图像处理)
-- ✅ 具体的性能数据(7-8 倍提升)
-- ✅ 引用官方文档和权威调查
-- ✅ 1597 字深度内容
-
-查看 [ANALYSIS.md](examples/complete-workflow/ANALYSIS.md) 了解详细分析。
-
-### 命令行快速体验
-
-```bash
-# 1. 下载示例文章
-curl -o draft.md https://raw.githubusercontent.com/wordflowlab/geoify/main/examples/complete-workflow/draft.md
-
-# 2. 评估 E-E-A-T 分数
-geoify review draft.md
-
-# 3. 生成 Schema.org 标记
-geoify schema draft.md \
-  --url "https://example.com/rust-guide" \
-  --site-name "Tech Blog"
-```
-
-### 完整工作流
-
-```bash
-# 1. 初始化项目
-geoify init my-article
-
-# 2. 撰写文章(在 articles/ 目录)
-
-# 3. E-E-A-T 审校
-geoify review articles/001-topic/draft.md
-
-# 4. 根据建议优化
-
-# 5. 再次审校,确保达标
-geoify review articles/001-topic/final.md \
-  --target-experience 9 \
-  --target-authoritativeness 9
-
-# 6. 生成 Schema.org 标记
-geoify schema articles/001-topic/final.md \
-  --url "https://example.com/topic" \
-  --site-name "My Blog"
-
-# 7. 发布到网站
-```
-
-### 预期效果
-
-基于 9.7/10 的高分文章:
-- ✅ E-E-A-T 评分: 9.7/10
-- ✅ AI 引用概率: 80-90%
-- ✅ Perplexity 引用: 2-4 周内
-- ✅ ChatGPT 引用: 4-6 周内
-- ✅ 6 个月累计引用: 500-1000 次
+| 总分 | 评级 | AI 引用概率 | 预期效果 |
+|------|------|-----------|---------|
+| **9.0-10** | 优秀 | 80-95% | 2-4 周内被引用 |
+| **8.5-8.9** | 良好 | 70-80% | 4-6 周内被引用 |
+| **8.0-8.4** | 及格 | 60-70% | 6-8 周内被引用 |
+| **7.0-7.9** | 需优化 | 45-60% | 需要优化 |
+| **< 7.0** | 不达标 | < 45% | 必须优化 |
 
 ## 文档
 
-### 用户文档
-- [快速入门](examples/complete-workflow/QUICKSTART.md) - 5 分钟上手指南
-- [使用手册](USAGE.md) - 详细的使用说明
-- [示例分析](examples/complete-workflow/ANALYSIS.md) - 高分文章深度解析
-- [更新日志](CHANGELOG.md) - 版本变更记录
+### 快速导航
+
+| 文档 | 描述 | 适合人群 |
+|------|------|---------|
+| [**QUICKSTART.md**](QUICKSTART.md) | 10 分钟快速体验 | 新用户 |
+| [**USAGE.md**](USAGE.md) | 完整使用手册 | 所有用户 |
+| [**CHANGELOG.md**](CHANGELOG.md) | 版本更新记录 | 所有用户 |
+| [**README.md**](README.md) | 项目总览 (本文档) | 所有用户 |
 
 ### 开发文档
 - [完整 PRD](docs/PRD.md) - 产品需求文档

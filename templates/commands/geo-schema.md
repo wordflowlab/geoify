@@ -267,3 +267,37 @@ scripts:
 - ✅ JSON 格式有效
 - ✅ 生成了 JSON 和 HTML 两个文件
 - ✅ 提供了嵌入说明
+
+---
+
+## ✅ Schema 生成完成!下一步
+
+恭喜!你已经生成了 Schema.org 结构化数据:
+- ✅ JSON-LD 文件:`draft-schema.json`
+- ✅ HTML 标签文件:`draft-schema.html`
+
+### 验证 Schema
+
+建议使用 Google 工具验证:
+1. 访问 [Google Rich Results Test](https://search.google.com/test/rich-results)
+2. 粘贴 `draft-schema.json` 的内容
+3. 检查是否有错误
+
+### 下一步:准备发布
+
+在 AI 助手中运行以下命令,准备发布内容:
+
+```
+/geo.publish
+```
+
+这将帮你:
+- 生成发布检查清单
+- 提供 SEO 优化建议
+- 准备提交到 AI 索引
+
+**预计时间**: 5-10 分钟
+
+---
+
+**查看完整流程**: 你现在在第 7/9 步。查看 [README.md](../../README.md#完整工作流) 了解整体进度。

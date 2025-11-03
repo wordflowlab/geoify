@@ -1,6 +1,6 @@
 {
   "name": "geoify",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "type": "module",
   "description": "GEO (Generative Engine Optimization) - 优化内容使其成为 AI 引擎的引用来源",
   "keywords": [

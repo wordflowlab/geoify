@@ -23,7 +23,7 @@ cd my-article
 在 Claude Code 或其他 AI 助手中,使用斜杠命令开始 GEO 优化工作流:
 
 ```
-/geo-analyze "你的话题"
+/geo.analyze
 ```
 
 ## 完整工作流示例
@@ -55,7 +55,7 @@ AI 会帮你:
 #### 第 3 步: 定义内容目标
 
 ```
-/specify
+/geo.specify
 ```
 
 AI 会询问:
@@ -69,7 +69,7 @@ AI 会询问:
 #### 第 4 步: 研究竞争对手
 
 ```
-/research
+/geo.research
 ```
 
 AI 会帮你:
@@ -82,7 +82,7 @@ AI 会帮你:
 #### 第 5 步: 收集真实素材
 
 ```
-/collect
+/geo.collect
 ```
 
 AI 会指导你:
