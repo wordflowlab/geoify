@@ -1,0 +1,29 @@
+{
+  "siteName": "Geoify 文档",
+  "siteUrl": "https://geoify.example.com",
+  "siteDescription": "GEO (Generative Engine Optimization) - 优化内容使其成为 AI 引擎的引用来源",
+  "categories": {
+    "核心概念": {
+      "tags": ["GEO", "概念", "原理"],
+      "priority": 1,
+      "label": "核心概念"
+    },
+    "实践指南": {
+      "tags": ["教程", "指南", "实践"],
+      "priority": 2,
+      "label": "实践指南"
+    },
+    "技术文档": {
+      "tags": ["API", "技术", "开发"],
+      "priority": 3,
+      "label": "技术文档"
+    },
+    "案例研究": {
+      "tags": ["案例", "研究", "分析"],
+      "priority": 4,
+      "label": "案例研究"
+    }
+  },
+  "minEEATScore": 7.0,
+  "maxArticles": 100
+}

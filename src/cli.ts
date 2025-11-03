@@ -5,13 +5,14 @@ import chalk from 'chalk'
 import { initCommand } from './commands/init.js'
 import { reviewCommand } from './commands/review.js'
 import { schemaCommand } from './commands/schema.js'
+import { generateLlmsCommand } from './commands/generate-llms.js'
 
 const program = new Command()
 
 program
   .name('geoify')
   .description('GEO (Generative Engine Optimization) - 优化内容使其成为 AI 引擎的引用来源')
-  .version('0.1.0') // GEO MVP - E-E-A-T scoring + Schema.org generation
+  .version('0.2.0') // GEO v0.2.0 - E-E-A-T + Schema.org + llms.txt
 
 // Init 命令
 program
@@ -90,6 +91,36 @@ program
       })
     } catch (error) {
       console.error(chalk.red('Schema 生成失败:'), error)
+      process.exit(1)
+    }
+  })
+
+// Generate LLMs 命令
+program
+  .command('generate-llms')
+  .description('生成 llms.txt 和 llms-full.txt 文件')
+  .option('--articles <dir>', '文章目录', 'articles')
+  .option('--output <dir>', '输出目录', 'public')
+  .option('--site-name <name>', '网站名称')
+  .option('--site-url <url>', '网站 URL')
+  .option('--site-description <desc>', '网站描述')
+  .option('--config <path>', '配置文件路径 (.geoify/config.json)')
+  .option('--min-score <score>', '最低 E-E-A-T 分数', '7.0')
+  .option('--max-articles <num>', '最大文章数', '100')
+  .action(async (options) => {
+    try {
+      await generateLlmsCommand({
+        articles: options.articles,
+        output: options.output,
+        siteName: options.siteName,
+        siteUrl: options.siteUrl,
+        siteDescription: options.siteDescription,
+        config: options.config,
+        minScore: parseFloat(options.minScore),
+        maxArticles: parseInt(options.maxArticles, 10)
+      })
+    } catch (error) {
+      console.error(chalk.red('llms.txt 生成失败:'), error)
       process.exit(1)
     }
   })

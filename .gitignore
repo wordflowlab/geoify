@@ -46,3 +46,4 @@ test-*.json
 # Editor
 *.sublime-*
 .editorconfig
+docs/share

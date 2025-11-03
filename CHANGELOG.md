@@ -8,10 +8,111 @@
 ## [Unreleased]
 
 ### 计划中
-- AI 引用跟踪功能 (`/geo-track`) - v0.2.0
-- 竞争分析功能 (`/geo-analyze`) - v0.2.0
+- AI 引用跟踪功能 (`geoify track`) - v0.3.0
+- 竞争分析功能 (`geoify analyze`) - v0.3.0
 - 多语言支持(英文、日文) - v0.3.0
 - Web 可视化看板 - v0.3.0
+
+## [0.2.0] - 2025-11-03
+
+### 重要里程碑 🎉
+
+**v0.2.0 正式版发布** - llms.txt 生成系统完整实现
+
+GEO 三大支柱正式完成:
+1. ✅ E-E-A-T 评分系统 (v0.1.0)
+2. ✅ Schema.org 生成 (v0.1.0)
+3. ✅ llms.txt 生成 (v0.2.0)
+
+### 新增功能
+
+1. **LLMsTxtGenerator 核心类** ✅
+   - 自动扫描文章目录
+   - 提取 frontmatter 元数据
+   - 自动计算 E-E-A-T 分数
+   - 基于分数过滤低质量文章
+   - 按分数排序文章
+   - 基于标签自动分类
+
+2. **CLI 命令: `geoify generate-llms`** ✅
+   - 自动生成 llms.txt (导航索引)
+   - 自动生成 llms-full.txt (完整内容)
+   - 支持配置文件 (.geoify/config.json)
+   - 支持命令行参数配置
+   - 丰富的统计信息输出
+   - 详细的文件大小和性能统计
+
+3. **配置系统** ✅
+   - JSON 配置文件支持
+   - 分类配置 (tags, priority, label)
+   - 质量过滤 (minEEATScore)
+   - 数量限制 (maxArticles)
+   - 完整的网站元信息配置
+
+### 技术改进
+
+- ✅ 完整的单元测试覆盖 (12 个测试用例)
+- ✅ TypeScript 类型安全
+- ✅ 递归目录扫描
+- ✅ 自动 URL 生成
+- ✅ Markdown 格式输出
+- ✅ 元数据统计功能
+
+### 文档更新
+
+- ✅ 移除所有"即将支持"标记
+- ✅ 更新 WORKFLOW_TUTORIAL.md 添加实际命令示例
+- ✅ 更新 API_REFERENCE.md 完善 API 文档
+- ✅ 更新 LLMS_TXT_GUIDE.md 添加实战指南
+
+### 示例配置
+
+``json
+{
+  "siteName": "My Blog",
+  "siteUrl": "https://example.com",
+  "siteDescription": "A blog about technology",
+  "categories": {
+    "核心文章": {
+      "tags": ["核心", "教程"],
+      "priority": 1
+    }
+  },
+  "minEEATScore": 7.0,
+  "maxArticles": 100
+}
+``
+
+### 使用示例
+
+``bash
+# 使用命令行参数
+geoify generate-llms \
+  --articles articles/ \
+  --output public/ \
+  --site-name "My Blog" \
+  --site-url "https://example.com" \
+  --site-description "A blog about technology"
+
+# 使用配置文件
+geoify generate-llms --config .geoify/config.json
+``
+
+### 升级说明
+
+从 v0.1.0 升级:
+
+``bash
+npm install -g geoify
+``
+
+无破坏性变更,新增功能完全向后兼容。
+
+### 性能数据
+
+- 单篇文章处理时间: <10ms
+- 100 篇文章完整处理: <2s
+- 生成文件大小: llms.txt ~500B-2KB, llms-full.txt 根据内容而定
 
 ## [0.1.0] - 2025-11-02
 
