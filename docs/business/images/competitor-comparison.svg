@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- 标题 -->
+  <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">七大数据公司对比矩阵</text>
+
+  <!-- 表头 -->
+  <rect x="50" y="50" width="120" height="40" fill="#1976D2" opacity="0.9"/>
+  <rect x="170" y="50" width="90" height="40" fill="#1976D2" opacity="0.9"/>
+  <rect x="260" y="50" width="110" height="40" fill="#1976D2" opacity="0.9"/>
+  <rect x="370" y="50" width="100" height="40" fill="#1976D2" opacity="0.9"/>
+  <rect x="470" y="50" width="150" height="40" fill="#1976D2" opacity="0.9"/>
+  <rect x="620" y="50" width="130" height="40" fill="#1976D2" opacity="0.9"/>
+
+  <text x="110" y="75" text-anchor="middle" font-size="12" fill="white" font-weight="bold">公司</text>
+  <text x="215" y="75" text-anchor="middle" font-size="12" fill="white" font-weight="bold">成立年份</text>
+  <text x="315" y="75" text-anchor="middle" font-size="12" fill="white" font-weight="bold">切入点</text>
+  <text x="420" y="75" text-anchor="middle" font-size="12" fill="white" font-weight="bold">估值</text>
+  <text x="545" y="75" text-anchor="middle" font-size="12" fill="white" font-weight="bold">核心差异化</text>
+  <text x="685" y="75" text-anchor="middle" font-size="12" fill="white" font-weight="bold">启示</text>
+
+  <!-- 数据行 -->
+  <!-- 七麦 -->
+  <rect x="50" y="90" width="700" height="50" fill="#E3F2FD"/>
+  <text x="110" y="120" text-anchor="middle" font-size="11" font-weight="bold" fill="#1976D2">七麦数据</text>
+  <text x="215" y="120" text-anchor="middle" font-size="10" fill="#333">2014</text>
+  <text x="315" y="120" text-anchor="middle" font-size="10" fill="#333">ASO数据</text>
+  <text x="420" y="120" text-anchor="middle" font-size="10" fill="#333">¥20-30亿</text>
+  <text x="545" y="120" text-anchor="middle" font-size="10" fill="#333">移动应用数据垄断</text>
+  <text x="685" y="120" text-anchor="middle" font-size="9" fill="#666">早期切入建立壁垒</text>
+
+  <!-- 蝉妈妈 -->
+  <rect x="50" y="140" width="700" height="50" fill="#FFF3E0"/>
+  <text x="110" y="170" text-anchor="middle" font-size="11" font-weight="bold" fill="#F57C00">蝉妈妈</text>
+  <text x="215" y="170" text-anchor="middle" font-size="10" fill="#333">2019</text>
+  <text x="315" y="170" text-anchor="middle" font-size="10" fill="#333">抖音直播</text>
+  <text x="420" y="170" text-anchor="middle" font-size="10" fill="#333">¥15-25亿</text>
+  <text x="545" y="170" text-anchor="middle" font-size="10" fill="#333">首创停留时间指标</text>
+  <text x="685" y="170" text-anchor="middle" font-size="9" fill="#666">独家指标话语权</text>
+
+  <!-- 飞瓜 -->
+  <rect x="50" y="190" width="700" height="50" fill="#E8F5E9"/>
+  <text x="110" y="220" text-anchor="middle" font-size="11" font-weight="bold" fill="#388E3C">飞瓜数据</text>
+  <text x="215" y="220" text-anchor="middle" font-size="10" fill="#333">2018</text>
+  <text x="315" y="220" text-anchor="middle" font-size="10" fill="#333">多平台电商</text>
+  <text x="420" y="220" text-anchor="middle" font-size="10" fill="#333">未披露</text>
+  <text x="545" y="220" text-anchor="middle" font-size="10" fill="#333">快手+B站覆盖</text>
+  <text x="685" y="220" text-anchor="middle" font-size="9" fill="#666">多平台分散风险</text>
+
+  <!-- 易观 -->
+  <rect x="50" y="240" width="700" height="50" fill="#FCE4EC"/>
+  <text x="110" y="270" text-anchor="middle" font-size="11" font-weight="bold" fill="#C2185B">易观数据</text>
+  <text x="215" y="270" text-anchor="middle" font-size="10" fill="#333">2012</text>
+  <text x="315" y="270" text-anchor="middle" font-size="10" fill="#333">移动互联网</text>
+  <text x="420" y="270" text-anchor="middle" font-size="10" fill="#333">¥30亿(C轮)</text>
+  <text x="545" y="270" text-anchor="middle" font-size="10" fill="#333">最早入场持续创新</text>
+  <text x="685" y="270" text-anchor="middle" font-size="9" fill="#666">先发+产品迭代</text>
+
+  <!-- 神策 -->
+  <rect x="50" y="290" width="700" height="50" fill="#F3E5F5"/>
+  <text x="110" y="320" text-anchor="middle" font-size="11" font-weight="bold" fill="#7B1FA2">神策数据</text>
+  <text x="215" y="320" text-anchor="middle" font-size="10" fill="#333">2015</text>
+  <text x="315" y="320" text-anchor="middle" font-size="10" fill="#333">用户行为</text>
+  <text x="420" y="320" text-anchor="middle" font-size="10" fill="#333">¥40亿(D轮)</text>
+  <text x="545" y="320" text-anchor="middle" font-size="10" fill="#333">私有化部署</text>
+  <text x="685" y="320" text-anchor="middle" font-size="9" fill="#666">ToB高客单价</text>
+
+  <!-- GrowingIO -->
+  <rect x="50" y="340" width="700" height="50" fill="#E0F2F1"/>
+  <text x="110" y="370" text-anchor="middle" font-size="11" font-weight="bold" fill="#00796B">GrowingIO</text>
+  <text x="215" y="370" text-anchor="middle" font-size="10" fill="#333">2015</text>
+  <text x="315" y="370" text-anchor="middle" font-size="10" fill="#333">无埋点</text>
+  <text x="420" y="370" text-anchor="middle" font-size="10" fill="#333">¥20亿(C轮)</text>
+  <text x="545" y="370" text-anchor="middle" font-size="10" fill="#333">无埋点技术</text>
+  <text x="685" y="370" text-anchor="middle" font-size="9" fill="#666">技术创新降门槛</text>
+
+  <!-- 艺恩 -->
+  <rect x="50" y="390" width="700" height="50" fill="#FBE9E7"/>
+  <text x="110" y="420" text-anchor="middle" font-size="11" font-weight="bold" fill="#D84315">艺恩数据</text>
+  <text x="215" y="420" text-anchor="middle" font-size="10" fill="#333">2006</text>
+  <text x="315" y="420" text-anchor="middle" font-size="10" fill="#333">影视票房</text>
+  <text x="420" y="420" text-anchor="middle" font-size="10" fill="#333">被万达收购</text>
+  <text x="545" y="420" text-anchor="middle" font-size="10" fill="#333">垂直行业深耕18年</text>
+  <text x="685" y="420" text-anchor="middle" font-size="9" fill="#666">战略收购退出</text>
+
+  <!-- Geoify (对比行) -->
+  <rect x="50" y="440" width="700" height="50" fill="#FFEB3B" opacity="0.3"/>
+  <rect x="50" y="440" width="700" height="50" fill="none" stroke="#FBC02D" stroke-width="2"/>
+  <text x="110" y="470" text-anchor="middle" font-size="11" font-weight="bold" fill="#F57F17">Geoify</text>
+  <text x="215" y="470" text-anchor="middle" font-size="10" fill="#333">2025</text>
+  <text x="315" y="470" text-anchor="middle" font-size="10" fill="#333">GEO/AI引用</text>
+  <text x="420" y="470" text-anchor="middle" font-size="10" fill="#333">¥3.5亿(目标)</text>
+  <text x="545" y="470" text-anchor="middle" font-size="10" fill="#333">AI引用数据垄断</text>
+  <text x="685" y="470" text-anchor="middle" font-size="9" fill="#666">综合七家所长</text>
+</svg>

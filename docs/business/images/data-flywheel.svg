@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <!-- 标题 -->
+  <text x="250" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Geoify 数据飞轮</text>
+
+  <!-- 中心圆 -->
+  <circle cx="250" cy="270" r="60" fill="#1976D2" opacity="0.2"/>
+  <text x="250" y="265" text-anchor="middle" font-size="14" font-weight="bold" fill="#1976D2">数据</text>
+  <text x="250" y="283" text-anchor="middle" font-size="14" font-weight="bold" fill="#1976D2">飞轮</text>
+
+  <!-- 环节1: 用户评分内容 -->
+  <g>
+    <circle cx="250" cy="120" r="50" fill="#E3F2FD" stroke="#1976D2" stroke-width="2"/>
+    <text x="250" y="115" text-anchor="middle" font-size="11" fill="#333">用户使用</text>
+    <text x="250" y="130" text-anchor="middle" font-size="11" fill="#333">geoify review</text>
+  </g>
+
+  <!-- 箭头1 -->
+  <path d="M 290 140 Q 340 180 330 240" stroke="#4CAF50" stroke-width="3" fill="none" marker-end="url(#arrow-green)"/>
+  <text x="345" y="190" font-size="10" fill="#4CAF50" font-weight="bold">评分数据</text>
+
+  <!-- 环节2: 积累样本 -->
+  <g>
+    <circle cx="370" cy="270" r="50" fill="#FFF3E0" stroke="#F57C00" stroke-width="2"/>
+    <text x="370" y="265" text-anchor="middle" font-size="11" fill="#333">积累</text>
+    <text x="370" y="280" text-anchor="middle" font-size="11" fill="#333">E-E-A-T样本</text>
+  </g>
+
+  <!-- 箭头2 -->
+  <path d="M 340 310 Q 290 350 250 350" stroke="#4CAF50" stroke-width="3" fill="none" marker-end="url(#arrow-green)"/>
+  <text x="300" y="365" font-size="10" fill="#4CAF50" font-weight="bold">训练模型</text>
+
+  <!-- 环节3: 改进算法 -->
+  <g>
+    <circle cx="250" cy="420" r="50" fill="#E8F5E9" stroke="#388E3C" stroke-width="2"/>
+    <text x="250" y="415" text-anchor="middle" font-size="11" fill="#333">优化</text>
+    <text x="250" y="430" text-anchor="middle" font-size="11" fill="#333">评分算法</text>
+  </g>
+
+  <!-- 箭头3 -->
+  <path d="M 210 390 Q 160 350 130 300" stroke="#4CAF50" stroke-width="3" fill="none" marker-end="url(#arrow-green)"/>
+  <text x="135" y="345" font-size="10" fill="#4CAF50" font-weight="bold">更准确</text>
+
+  <!-- 环节4: 更好的评估 -->
+  <g>
+    <circle cx="130" cy="270" r="50" fill="#FCE4EC" stroke="#C2185B" stroke-width="2"/>
+    <text x="130" y="265" text-anchor="middle" font-size="11" fill="#333">提供更准确</text>
+    <text x="130" y="280" text-anchor="middle" font-size="11" fill="#333">的评估</text>
+  </g>
+
+  <!-- 箭头4 -->
+  <path d="M 160 230 Q 200 180 240 150" stroke="#4CAF50" stroke-width="3" fill="none" marker-end="url(#arrow-green)"/>
+  <text x="175" y="185" font-size="10" fill="#4CAF50" font-weight="bold">吸引用户</text>
+
+  <!-- 循环箭头 -->
+  <path d="M 280 95 Q 400 60 430 200" stroke="#FF5722" stroke-width="2" fill="none" stroke-dasharray="5,5"/>
+  <text x="360" y="70" font-size="12" fill="#FF5722" font-weight="bold">循环加速</text>
+
+  <!-- 箭头标记定义 -->
+  <defs>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#4CAF50"/>
+    </marker>
+  </defs>
+</svg>

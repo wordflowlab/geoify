@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <!-- 标题 -->
+  <text x="300" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Year 5 收入结构 (总收入: ¥2.035亿)</text>
+
+  <!-- 饼图中心 -->
+  <g transform="translate(200, 220)">
+    <!-- SaaS订阅 32% -->
+    <path d="M 0,-120 A 120,120 0 0,1 86.4,86.4 L 0,0 Z" fill="#1976D2" opacity="0.8"/>
+    <text x="30" y="-60" font-size="12" fill="white" font-weight="bold">SaaS</text>
+    <text x="20" y="-45" font-size="12" fill="white" font-weight="bold">32%</text>
+
+    <!-- 数据产品 20% -->
+    <path d="M 86.4,86.4 A 120,120 0 0,1 -37.1,114.1 L 0,0 Z" fill="#F57C00" opacity="0.8"/>
+    <text x="30" y="70" font-size="12" fill="white" font-weight="bold">数据</text>
+    <text x="20" y="85" font-size="12" fill="white" font-weight="bold">20%</text>
+
+    <!-- 服务市场 15% -->
+    <path d="M -37.1,114.1 A 120,120 0 0,1 -114.1,37.1 L 0,0 Z" fill="#388E3C" opacity="0.8"/>
+    <text x="-75" y="75" font-size="12" fill="white" font-weight="bold">市场</text>
+    <text x="-75" y="90" font-size="12" fill="white" font-weight="bold">15%</text>
+
+    <!-- 企业私有化 12% -->
+    <path d="M -114.1,37.1 A 120,120 0 0,1 -114.1,-37.1 L 0,0 Z" fill="#C2185B" opacity="0.8"/>
+    <text x="-95" y="0" font-size="12" fill="white" font-weight="bold">私有</text>
+    <text x="-95" y="15" font-size="12" fill="white" font-weight="bold">12%</text>
+
+    <!-- 其他 21% -->
+    <path d="M -114.1,-37.1 A 120,120 0 0,1 0,-120 L 0,0 Z" fill="#7B1FA2" opacity="0.8"/>
+    <text x="-50" y="-70" font-size="12" fill="white" font-weight="bold">其他</text>
+    <text x="-50" y="-55" font-size="12" fill="white" font-weight="bold">21%</text>
+  </g>
+
+  <!-- 图例 -->
+  <g transform="translate(380, 100)">
+    <text x="0" y="0" font-size="14" font-weight="bold" fill="#333">收入明细</text>
+
+    <rect x="0" y="15" width="15" height="15" fill="#1976D2" opacity="0.8"/>
+    <text x="25" y="27" font-size="11" fill="#333">SaaS订阅: ¥6550万 (32%)</text>
+
+    <rect x="0" y="40" width="15" height="15" fill="#F57C00" opacity="0.8"/>
+    <text x="25" y="52" font-size="11" fill="#333">数据产品: ¥4000万 (20%)</text>
+
+    <rect x="0" y="65" width="15" height="15" fill="#388E3C" opacity="0.8"/>
+    <text x="25" y="77" font-size="11" fill="#333">服务市场: ¥3000万 (15%)</text>
+
+    <rect x="0" y="90" width="15" height="15" fill="#C2185B" opacity="0.8"/>
+    <text x="25" y="102" font-size="11" fill="#333">企业私有: ¥2500万 (12%)</text>
+
+    <rect x="0" y="115" width="15" height="15" fill="#7B1FA2" opacity="0.8"/>
+    <text x="25" y="127" font-size="11" fill="#333">其他: ¥4285万 (21%)</text>
+
+    <line x1="0" y1="145" x2="190" y2="145" stroke="#ddd" stroke-width="1"/>
+
+    <text x="0" y="165" font-size="10" fill="#666">• BI平台: ¥1200万</text>
+    <text x="0" y="180" font-size="10" fill="#666">• 认证培训: ¥1000万</text>
+    <text x="0" y="195" font-size="10" fill="#666">• 行业联盟: ¥2100万</text>
+  </g>
+
+  <!-- 底部说明 -->
+  <text x="300" y="380" text-anchor="middle" font-size="10" fill="#999">* 收入结构多元化,降低单一业务风险</text>
+</svg>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+  <!-- 标题 -->
+  <text x="400" y="30" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Geoify 三阶段演进路径</text>
+
+  <!-- 阶段1: 工具期 -->
+  <g>
+    <rect x="50" y="60" width="200" height="200" rx="10" fill="#E3F2FD" stroke="#1976D2" stroke-width="2"/>
+    <text x="150" y="90" text-anchor="middle" font-size="16" font-weight="bold" fill="#1976D2">阶段1: 工具期</text>
+    <text x="150" y="115" text-anchor="middle" font-size="12" fill="#555">0-12个月</text>
+
+    <text x="60" y="140" font-size="11" fill="#333">目标:</text>
+    <text x="60" y="158" font-size="10" fill="#666">• 1000+ 付费用户</text>
+    <text x="60" y="173" font-size="10" fill="#666">• ARR ¥100万</text>
+
+    <text x="60" y="195" font-size="11" fill="#333">核心产品:</text>
+    <text x="60" y="213" font-size="10" fill="#666">• CLI 工具</text>
+    <text x="60" y="228" font-size="10" fill="#666">• E-E-A-T 评分</text>
+    <text x="60" y="243" font-size="10" fill="#666">• Schema 生成</text>
+  </g>
+
+  <!-- 箭头1 -->
+  <path d="M 260 160 L 290 160" stroke="#1976D2" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- 阶段2: 平台期 -->
+  <g>
+    <rect x="300" y="60" width="200" height="200" rx="10" fill="#FFF3E0" stroke="#F57C00" stroke-width="2"/>
+    <text x="400" y="90" text-anchor="middle" font-size="16" font-weight="bold" fill="#F57C00">阶段2: 平台期</text>
+    <text x="400" y="115" text-anchor="middle" font-size="12" fill="#555">1-3年</text>
+
+    <text x="310" y="140" font-size="11" fill="#333">目标:</text>
+    <text x="310" y="158" font-size="10" fill="#666">• 5000+ 付费用户</text>
+    <text x="310" y="173" font-size="10" fill="#666">• ARR ¥3000万</text>
+
+    <text x="310" y="195" font-size="11" fill="#333">核心产品:</text>
+    <text x="310" y="213" font-size="10" fill="#666">• AI 引用数据库</text>
+    <text x="310" y="228" font-size="10" fill="#666">• 行业报告</text>
+    <text x="310" y="243" font-size="10" fill="#666">• API 平台</text>
+  </g>
+
+  <!-- 箭头2 -->
+  <path d="M 510 160 L 540 160" stroke="#F57C00" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- 阶段3: 生态期 -->
+  <g>
+    <rect x="550" y="60" width="200" height="200" rx="10" fill="#E8F5E9" stroke="#388E3C" stroke-width="2"/>
+    <text x="650" y="90" text-anchor="middle" font-size="16" font-weight="bold" fill="#388E3C">阶段3: 生态期</text>
+    <text x="650" y="115" text-anchor="middle" font-size="12" fill="#555">3-5年+</text>
+
+    <text x="560" y="140" font-size="11" fill="#333">目标:</text>
+    <text x="560" y="158" font-size="10" fill="#666">• 50000+ 付费用户</text>
+    <text x="560" y="173" font-size="10" fill="#666">• ARR ¥2.5亿</text>
+
+    <text x="560" y="195" font-size="11" fill="#333">核心产品:</text>
+    <text x="560" y="213" font-size="10" fill="#666">• 服务商网络</text>
+    <text x="560" y="228" font-size="10" fill="#666">• 认证体系</text>
+    <text x="560" y="243" font-size="10" fill="#666">• 行业联盟</text>
+  </g>
+
+  <!-- 箭头标记定义 -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#1976D2"/>
+    </marker>
+  </defs>
+</svg>
